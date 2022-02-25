@@ -105,8 +105,27 @@
 import axios from 'axios';
 import Loading from "../components/Loading";
 export default {
+  head(){
+    return{
+      title: 'Movie App - Latest Streamed Movies',
+      meta: [
+        {
+        hid: 'description',
+        name: 'description',
+        content: 'Get the latest streamed movies'
+      },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: 'Get the latest streamed movies'
+        }
+      ]
+    }
+  },
   components: {Loading},
+
   data() {
+
     return {
       movies: [],
       searchInput: '',
